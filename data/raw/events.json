@@ -1,0 +1,500 @@
+{
+  "academic_session": "2025/2026",
+  "university": "Babcock University",
+  "calendar_type": "Undergraduate - Regular",
+  "total_events": 80,
+  "events": [
+    {
+      "date": "Aug. 18,2025 - Aug. 31, 2025",
+      "day": "Sunday",
+      "description": "Online Registration from Home for 200 Level to 600 Level (Returning Students) ",
+      "parsed": true
+    },
+    {
+      "date": "August 18, 2025",
+      "day": "Monday",
+      "description": "Deans | HoDs | Course Advisors Workshop",
+      "parsed": true
+    },
+    {
+      "date": "August 19, 2025",
+      "day": "Tuesday",
+      "description": "New Faculty and Staff | Teachers’ Workshop",
+      "parsed": true
+    },
+    {
+      "date": "Aug. 20, 2025 - Aug. 23, 2025",
+      "day": "Saturday",
+      "description": "Colloquium",
+      "parsed": true
+    },
+    {
+      "date": "Sept. 1, 2025 - Sept. 4, 2025",
+      "day": "Thursday",
+      "description": " Resumption of 200 Level to 600 Level (Returning Students) & Completion of Registration for Returning Students (excluding students who took part of the Post-SIWES Semester",
+      "parsed": true
+    },
+    {
+      "date": "September 8, 2025",
+      "day": "Monday",
+      "description": "Classes begin for 200 to 600 Level Students (excluding students who were part of the Post-SIWES Semester) ",
+      "parsed": true
+    },
+    {
+      "date": "September 11, 2025",
+      "day": "Thursday",
+      "description": "Resumption of 400 Level & 500 Level Returning Students who took part in the Post-SIWES Semester",
+      "parsed": true
+    },
+    {
+      "date": "September 15, 2025",
+      "day": "Monday",
+      "description": "Classes begin for 400 Level & 500 Level Returning Students who took part in the Post-SIWES Semester",
+      "parsed": true
+    },
+    {
+      "date": "September 17, 2025",
+      "day": "Wednesday",
+      "description": "Founder’s Day Celebration",
+      "parsed": true
+    },
+    {
+      "date": "September 18, 2025",
+      "day": "Thursday",
+      "description": "Academic Standards Board",
+      "parsed": true
+    },
+    {
+      "date": "September 25, 2025",
+      "day": "Thursday",
+      "description": "Senate",
+      "parsed": true
+    },
+    {
+      "date": "September 26, 2025",
+      "day": "Friday",
+      "description": "Last day to enter any Class/Change a Program or Register",
+      "parsed": true
+    },
+    {
+      "date": "October 1, 2025",
+      "day": "Wednesday",
+      "description": "Independence Day National Holiday",
+      "parsed": true
+    },
+    {
+      "date": "Oct. 14, 2025 - Oct. 16, 2025",
+      "day": "Thursday",
+      "description": "Arrival of 100 Level & Direct Entry Students | Verification",
+      "parsed": true
+    },
+    {
+      "date": "Oct. 17, 2025 - Oct. 23, 2025",
+      "day": "Thursday",
+      "description": "Orientation for 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "Oct. 18, 2025 - Oct. 25, 2025",
+      "day": "Saturday",
+      "description": "Youth Week of Prayer",
+      "parsed": true
+    },
+    {
+      "date": "Oct. 27, 2025 - Oct. 31, 2025",
+      "day": "Friday",
+      "description": "Mid-Semester Examination for 200 to 600 Level Students",
+      "parsed": true
+    },
+    {
+      "date": "October 27, 2025",
+      "day": "Monday",
+      "description": "Classes begin for 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "November 6, 2025",
+      "day": "Thursday",
+      "description": "Academic Standards Board",
+      "parsed": true
+    },
+    {
+      "date": "November 13, 2025",
+      "day": "Thursday",
+      "description": "Senate",
+      "parsed": true
+    },
+    {
+      "date": "November 20, 2025",
+      "day": "Thursday",
+      "description": "Congregation",
+      "parsed": true
+    },
+    {
+      "date": "November 21, 2025",
+      "day": "Friday",
+      "description": "First Semester Registration Closes for 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "Dec. 4, 2025 - Dec. 18, 2025",
+      "day": "Thursday",
+      "description": "End of First Semester Examination for 200 - 600 Level Students",
+      "parsed": true
+    },
+    {
+      "date": "December 16, 2025",
+      "day": "Tuesday",
+      "description": "Middle of Semester Break for 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "December 23, 2025 - January 6, 2026",
+      "day": "Monday",
+      "description": "Inter-Semester Break for Faculty and Staff",
+      "parsed": true
+    },
+    {
+      "date": "January 7, 2026",
+      "day": "Wednesday",
+      "description": "Resumption for Staff and Faculty",
+      "parsed": true
+    },
+    {
+      "date": "January 8, 2026",
+      "day": "Thursday",
+      "description": "General Orientation for Faculty and Staff",
+      "parsed": true
+    },
+    {
+      "date": "January 9, 2026",
+      "day": "Friday",
+      "description": "Registry and Hall Administrators’ Preparation for Resumption",
+      "parsed": true
+    },
+    {
+      "date": "January 12, 2026 - January 14, 2026",
+      "day": "Wednesday",
+      "description": "Resumption for ALL Students",
+      "parsed": true
+    },
+    {
+      "date": "January 12, 2026",
+      "day": "Monday",
+      "description": "Deans | HoDs | Course Advisors Workshop",
+      "parsed": true
+    },
+    {
+      "date": "January 13, 2026",
+      "day": "Tuesday",
+      "description": "New Faculty and Staff | Teachers’ Workshop",
+      "parsed": true
+    },
+    {
+      "date": "January 14, 2026",
+      "day": "Wednesday",
+      "description": "Workshop on “THE” and Ranking Related Issues",
+      "parsed": true
+    },
+    {
+      "date": "January 15, 2026",
+      "day": "Thursday",
+      "description": "Second Semester Classes Begin for 200 to 600 Level Students",
+      "parsed": true
+    },
+    {
+      "date": "January 15, 2026",
+      "day": "Thursday",
+      "description": "First Semester Classes Continue for 100 Level and DE Students",
+      "parsed": true
+    },
+    {
+      "date": "January 29, 2026",
+      "day": "Thursday",
+      "description": "Academic Standards Board",
+      "parsed": true
+    },
+    {
+      "date": "February 2, 2026 - February 6, 2026",
+      "day": "Friday",
+      "description": "Mid-Semester Examination for 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "February 5, 2026",
+      "day": "Thursday",
+      "description": "Senate",
+      "parsed": true
+    },
+    {
+      "date": "February 6, 2026",
+      "day": "Friday",
+      "description": "Last Day to Enter any Class for 200 – 600 Level Students",
+      "parsed": true
+    },
+    {
+      "date": "February 14, 2026 - February 21, 2026",
+      "day": "Saturday",
+      "description": "Week of Spiritual Emphasis",
+      "parsed": true
+    },
+    {
+      "date": "February 19, 2026",
+      "day": "Thursday",
+      "description": "Academic Standards Board",
+      "parsed": true
+    },
+    {
+      "date": "February 22, 2026 - February 28, 2026",
+      "day": "Saturday",
+      "description": "Nigeria Association of Adventist Students (NAAS) Week",
+      "parsed": true
+    },
+    {
+      "date": "February 24, 2026 - March 3, 2026",
+      "day": "Tuesday",
+      "description": "First Semester Examination for 100Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "February 26, 2026",
+      "day": "Thursday",
+      "description": "Senate",
+      "parsed": true
+    },
+    {
+      "date": "March 4, 2026 - March 8, 2026",
+      "day": "Sunday",
+      "description": "End of Semester Break for 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "March 4, 2026",
+      "day": "Wednesday",
+      "description": "Second Semester Online Registration Begins for 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "March 8, 2026",
+      "day": "Sunday",
+      "description": "Resumption for all 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "March 9, 2026",
+      "day": "Monday",
+      "description": "Second Semester Classes Begins for 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "March 9, 2026 - March 13, 2026",
+      "day": "Friday",
+      "description": "Mid-Semester Examination for all 200 to 600 Level Students",
+      "parsed": true
+    },
+    {
+      "date": "March 16, 2026 - March 20, 2026",
+      "day": "Friday",
+      "description": "Career and Job Fair Week (Lecture-free for Graduating Class)",
+      "parsed": true
+    },
+    {
+      "date": "March 19, 2026",
+      "day": "Thursday",
+      "description": "Academic Standards Board",
+      "parsed": true
+    },
+    {
+      "date": "March 24, 2026",
+      "day": "Tuesday",
+      "description": "Research Fair",
+      "parsed": true
+    },
+    {
+      "date": "March 26, 2026",
+      "day": "Thursday",
+      "description": "Senate",
+      "parsed": true
+    },
+    {
+      "date": "March 27, 2026",
+      "day": "Friday",
+      "description": "Last day to enter any Class for 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "April 3, 2026",
+      "day": "Friday",
+      "description": "Registration Closes for 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "April 16, 2026",
+      "day": "Thursday",
+      "description": "Academic Standards Board",
+      "parsed": true
+    },
+    {
+      "date": "April 23, 2026",
+      "day": "Thursday",
+      "description": "Senate",
+      "parsed": true
+    },
+    {
+      "date": "April 23, 2026 - May 7, 2026",
+      "day": "Thursday",
+      "description": "End of Second Semester Examination for 200 to 600 Level Students",
+      "parsed": true
+    },
+    {
+      "date": "May 1, 2026",
+      "day": "Friday",
+      "description": "Workers’ Day",
+      "parsed": true
+    },
+    {
+      "date": "May 4, 2026 - May 8, 2026",
+      "day": "Friday",
+      "description": "Mid-Semester Examination for 100 Level and Direct Entry Students",
+      "parsed": true
+    },
+    {
+      "date": "May 25, 2026",
+      "day": "Monday",
+      "description": "Commencement of Summer School for 200 to 500 Level Students",
+      "parsed": true
+    },
+    {
+      "date": "May 27, 2026",
+      "day": "Wednesday",
+      "description": "Summer Classes Begin",
+      "parsed": true
+    },
+    {
+      "date": "June 8, 2026",
+      "day": "Monday",
+      "description": "Last Day to Enter Any Summer School Class",
+      "parsed": true
+    },
+    {
+      "date": "June 11, 2026",
+      "day": "Thursday",
+      "description": "Academic Standards Board",
+      "parsed": true
+    },
+    {
+      "date": "June 18, 2026",
+      "day": "Thursday",
+      "description": "Senate",
+      "parsed": true
+    },
+    {
+      "date": "June 22, 2026 - June 26, 2026",
+      "day": "Friday",
+      "description": "Mid-Summer Examination",
+      "parsed": true
+    },
+    {
+      "date": "June 25, 2026 - July 2, 2026",
+      "day": "Thursday",
+      "description": "Second Semester Examination for 100 Level and DE Students",
+      "parsed": true
+    },
+    {
+      "date": "July 1, 2026",
+      "day": "Wednesday",
+      "description": "Resumption for Post-SIWES Students and Commencement of Classes",
+      "parsed": true
+    },
+    {
+      "date": "July 13, 2026 - July 16, 2026",
+      "day": "Thursday",
+      "description": "End of Summer School Examination",
+      "parsed": true
+    },
+    {
+      "date": "July 19, 2026",
+      "day": "Sunday",
+      "description": "Parents’ Consultative Forum Luncheon 1 : 0 0 p .m.",
+      "parsed": true
+    },
+    {
+      "date": "July 22, 2026",
+      "day": "Wednesday",
+      "description": "Graduating Students Arrive 2 : 0 0 p . m .",
+      "parsed": true
+    },
+    {
+      "date": "July 23, 2026",
+      "day": "Thursday",
+      "description": "Convocation Lecture 9 : 0 0 – 1 0 : 50 a.m.",
+      "parsed": true
+    },
+    {
+      "date": "July 23, 2026",
+      "day": "Thursday",
+      "description": "Alumni Connectivity 1 1 : 0 0 a . m . – 12:50 p.m.",
+      "parsed": true
+    },
+    {
+      "date": "July 23, 2026",
+      "day": "Thursday",
+      "description": "Graduation Dinner 6 : 0 0 – 9 :00 p.m.",
+      "parsed": true
+    },
+    {
+      "date": "July 24, 2026",
+      "day": "Friday",
+      "description": "Dress Rehearsal 7 : 0 0 – 9 : 3 0 a.m.",
+      "parsed": true
+    },
+    {
+      "date": "July 24, 2026",
+      "day": "Friday",
+      "description": "Tree Planting 1 0 : 0 0 a . m .",
+      "parsed": true
+    },
+    {
+      "date": "July 24, 2026",
+      "day": "Friday",
+      "description": "Project Dedication 1 0 : 3 0 a . m .",
+      "parsed": true
+    },
+    {
+      "date": "July 24, 2026",
+      "day": "Friday",
+      "description": "Consecration Service 6 : 3 0 p . m .",
+      "parsed": true
+    },
+    {
+      "date": "July 25, 2026",
+      "day": "Saturday",
+      "description": "Baccalaureate 8 : 3 0 a . m .",
+      "parsed": true
+    },
+    {
+      "date": "July 25, 2026",
+      "day": "Saturday",
+      "description": "Vesper Service 6 : 3 0 p . m.",
+      "parsed": true
+    },
+    {
+      "date": "July 26, 2026",
+      "day": "Sunday",
+      "description": "Convocation Ceremony 7 : 0 0 a . m .",
+      "parsed": true
+    },
+    {
+      "date": "July 27, 2026 - July 31, 2026",
+      "day": "Friday",
+      "description": "Mid-Semester for Post SIWES Students",
+      "parsed": true
+    },
+    {
+      "date": "August 24, 2026 - August 27, 2026",
+      "day": "Monday",
+      "description": "End of Semester Examination for Post SIWES Students",
+      "parsed": true
+    }
+  ]
+}

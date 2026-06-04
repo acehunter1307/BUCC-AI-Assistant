@@ -1,0 +1,30 @@
+{
+  "updates": [
+    {
+      "update_id": "upd_2026_03_02_csc309_time_change",
+      "update_type": "time_change",
+
+      "target_type": "class | event",
+      "target_id": "CSC309_WED_0800",
+
+      "applies_on": "2026-03-02",
+      "applies_until": null,
+
+      "change": {
+        "old": {
+          "start_time": "08:00",
+          "end_time": "10:00"
+        },
+        "new": {
+          "start_time": "10:00",
+          "end_time": "12:00"
+        }
+      },
+
+      "confidence": "high",
+      "source": "whatsapp",
+      "source_group": "CSC 300 Level Group",
+      "created_at": "2026-03-01T21:14:00Z"
+    }
+  ]
+}

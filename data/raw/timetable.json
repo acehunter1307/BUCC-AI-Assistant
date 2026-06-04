@@ -1,0 +1,132 @@
+{
+  "academic_session": "2025/2026",
+  "university": "Babcock University",
+  "program": "Computer Science - Group D (300 Level)",
+  "semester": "First Semester",
+  "timetable_type": "Weekly Class Schedule",
+  "time_slots": [
+    "7-8am",
+    "8-9am",
+    "9-10am",
+    "10-11am",
+    "11am-12pm",
+    "12pm-1pm",
+    "1pm-2pm",
+    "2pm-3pm",
+    "3pm-4pm",
+    "4pm-5pm",
+    "5pm-6pm"
+  ],
+  "weekly_schedule": [
+    {
+      "day": "Monday",
+      "classes": [
+        {
+          "time_slot": "9-10am",
+          "course_code": "BIS",
+          "course_name": "Intrerdisciplinary Seminar",
+          "instructor": "Unknown",
+          "location": "Amphitheater",
+          "parsed": true
+        },
+        {
+          "time_slot": "11am-1pm",
+          "course_code": "BU-CSC307",
+          "course_name": "Linux System",
+          "instructor": "Idepefo",
+          "location": "BUCODEL Lab 1",
+          "parsed": true
+        },
+        {
+          "time_slot": "3pm-6pm",
+          "course_code": "BU-CSC-333",
+          "course_name": "Database System Design",
+          "instructor": "Akinwunmi",
+          "location": "NH Room 2",
+          "parsed": true
+        }
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "classes": [
+        {
+          "time_slot": "8-9am",
+          "course_code": "BU-GST 317",
+          "course_name": "Fundamentals of Christian Faith",
+          "instructor": "Chintuwa",
+          "location": "OGDEN ACTIVITY HALL",
+          "parsed": true
+        },
+        {
+          "time_slot": "10-1pm",
+          "course_code": "ICT305",
+          "course_name": "Data Communication",
+          "instructor": "Adewuyi",
+          "location": "BUCODEL Room 1",
+          "parsed": true
+        }
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "classes": [
+        {
+          "time_slot": "8-10am",
+          "course_code": "CSC 309",
+          "course_name": "Artificial Intelligence",
+          "instructor": "Oladipo",
+          "location": "BUCODEL Lab 2",
+          "parsed": true
+        },
+        {
+          "time_slot": "12pm-1pm",
+          "course_code": "CSC 301",
+          "course_name": "Data Structures",
+          "instructor": "Udosen",
+          "location": "BUCODEL Lab 2",
+          "parsed": true
+        },
+        {
+          "time_slot": "4pm-6pm",
+          "course_code": "CSC 321",
+          "course_name": "Machine Learning",
+          "instructor": "Mr Clarkson",
+          "location": "New Horizon Studio 2",
+          "parsed": true
+        }
+      ]
+    },
+    {
+      "day": "Thursday",
+      "classes": [
+        {
+          "time_slot": "8am-10am",
+          "course_code": "CSC 301",
+          "course_name": "Data Structures",
+          "instructor": "Udosen",
+          "location": "F204",
+          "parsed": true
+        },
+        {
+          "time_slot": "4pm-6pm",
+          "course_code": "BU-GST 317",
+          "course_name": "Fundamentals of Christian Faith",
+          "instructor": "Chintuwa Sydney",
+          "location": "OGDEN ACTIVITY HALL",
+          "parsed": true
+        }
+      ]
+    },
+    {
+      "day": "Friday",
+      "classes": []
+    }
+  ],
+  "metadata": {
+    "total_classes": 12,
+    "days_with_classes": 4,
+    "extraction_date": "2026-02-24",
+    "data_source": "Weekly Timetable Spreadsheet"
+  }
+}
