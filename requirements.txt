@@ -4,3 +4,5 @@ anthropic
 starlette
 pydantic
 anyio
+twilio
+python-dotenv
