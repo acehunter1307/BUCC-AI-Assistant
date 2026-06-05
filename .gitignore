@@ -1,3 +1,4 @@
 node_modules/
 bucc-assistant/node_modules/
 bucc-assistant/.next/
+.env
