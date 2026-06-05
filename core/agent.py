@@ -16,7 +16,7 @@ load_dotenv()
 
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-MODEL = "openrouter/auto"
+MODEL = "deepseek/deepseek-chat-v3-0324:free"
 
 # ── Tool definitions (OpenAI function-calling format) ──────────────────────
 TOOLS = [
@@ -147,7 +147,6 @@ def agent_reply(message: str, program: str, level: str) -> str:
     """Send message to OpenRouter, handle tool call, return natural response.
     Falls back to rule-based query_router if OpenRouter is unavailable.
     """
-    print(f"DEBUG: API key present: {bool(OPENROUTER_API_KEY)}, key starts with: {OPENROUTER_API_KEY[:10] if OPENROUTER_API_KEY else 'EMPTY'}")
 
     # ── Guard: if no API key, go straight to fallback ─────────────────────
     if not OPENROUTER_API_KEY:
