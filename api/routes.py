@@ -2,6 +2,7 @@ from fastapi import APIRouter, Query
 from fastapi import Request
 from starlette.responses import Response
 from twilio.twiml.messaging_response import MessagingResponse
+from core.agent import agent_reply
 from core.chat_service import handle_message
 from core.user_store import get_user, save_user
 from core.query_router import route_query
@@ -41,14 +42,18 @@ def events_this_week():
     return get_events_this_week()
 
 
+# ── AI-powered ask endpoint ────────────────────────────────────────────────
 @router.get("/ask")
 def ask(
     q: str,
     program: str,
     level: str
 ):
-    return route_query(q, program, level)
+    reply = agent_reply(q, program, level)
+    return {"text": reply}
+ 
 
+## WhatsApp webhook endpoint for Twilio integration
 
 @router.post("/whatsapp/webhook")
 async def whatsapp_webhook(request: Request):

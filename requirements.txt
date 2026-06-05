@@ -6,3 +6,4 @@ pydantic
 anyio
 twilio
 python-dotenv
+requests
