@@ -147,6 +147,7 @@ def agent_reply(message: str, program: str, level: str) -> str:
     """Send message to OpenRouter, handle tool call, return natural response.
     Falls back to rule-based query_router if OpenRouter is unavailable.
     """
+    print(f"DEBUG: API key present: {bool(OPENROUTER_API_KEY)}, key starts with: {OPENROUTER_API_KEY[:10] if OPENROUTER_API_KEY else 'EMPTY'}")
 
     # ── Guard: if no API key, go straight to fallback ─────────────────────
     if not OPENROUTER_API_KEY:
