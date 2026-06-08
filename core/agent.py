@@ -1,6 +1,6 @@
 import os
-import google.generativeai as genai
-from google.generativeai.types import FunctionDeclaration, Tool
+from google import genai
+from google.genai import types
 from core.retrieval import (
     get_classes_today,
     get_classes_this_week,
@@ -15,50 +15,52 @@ from dotenv import load_dotenv
 load_dotenv()
 
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "")
-MODEL = "gemini-pro"
+MODEL = "gemini-2.5-flash"
 
 # ── Tool definitions ───────────────────────────────────────────────────────
-TOOLS = Tool(function_declarations=[
-    FunctionDeclaration(
-        name="get_classes_today",
-        description="Get the list of classes scheduled for today for the student.",
-        parameters={"type": "object", "properties": {}}
-    ),
-    FunctionDeclaration(
-        name="get_classes_this_week",
-        description="Get all classes scheduled for this week for the student.",
-        parameters={"type": "object", "properties": {}}
-    ),
-    FunctionDeclaration(
-        name="get_next_class",
-        description="Get the next upcoming class for the student.",
-        parameters={"type": "object", "properties": {}}
-    ),
-    FunctionDeclaration(
-        name="get_events_today",
-        description="Get events happening today at the university.",
-        parameters={"type": "object", "properties": {}}
-    ),
-    FunctionDeclaration(
-        name="get_events_this_week",
-        description="Get all events happening this week at the university.",
-        parameters={"type": "object", "properties": {}}
-    ),
-    FunctionDeclaration(
-        name="get_class_duration",
-        description="Get the duration in minutes of a specific class by its course code or name.",
-        parameters={
-            "type": "object",
-            "properties": {
-                "class_name": {
-                    "type": "string",
-                    "description": "The course code or name e.g. CSC 309, Machine Learning"
-                }
-            },
-            "required": ["class_name"]
-        }
-    ),
-])
+TOOLS = [
+    types.Tool(function_declarations=[
+        types.FunctionDeclaration(
+            name="get_classes_today",
+            description="Get the list of classes scheduled for today for the student.",
+            parameters=types.Schema(type=types.Type.OBJECT, properties={})
+        ),
+        types.FunctionDeclaration(
+            name="get_classes_this_week",
+            description="Get all classes scheduled for this week for the student.",
+            parameters=types.Schema(type=types.Type.OBJECT, properties={})
+        ),
+        types.FunctionDeclaration(
+            name="get_next_class",
+            description="Get the next upcoming class for the student.",
+            parameters=types.Schema(type=types.Type.OBJECT, properties={})
+        ),
+        types.FunctionDeclaration(
+            name="get_events_today",
+            description="Get events happening today at the university.",
+            parameters=types.Schema(type=types.Type.OBJECT, properties={})
+        ),
+        types.FunctionDeclaration(
+            name="get_events_this_week",
+            description="Get all events happening this week at the university.",
+            parameters=types.Schema(type=types.Type.OBJECT, properties={})
+        ),
+        types.FunctionDeclaration(
+            name="get_class_duration",
+            description="Get the duration in minutes of a specific class by its course code or name.",
+            parameters=types.Schema(
+                type=types.Type.OBJECT,
+                properties={
+                    "class_name": types.Schema(
+                        type=types.Type.STRING,
+                        description="The course code or name e.g. CSC 309, Machine Learning"
+                    )
+                },
+                required=["class_name"]
+            )
+        ),
+    ])
+]
 
 SYSTEM_PROMPT = """You are the BUCC AI Assistant, a helpful academic assistant for students at 
 Babcock University Computer Science department.
@@ -127,46 +129,59 @@ def agent_reply(message: str, program: str, level: str) -> str:
     Falls back to rule-based query_router if Gemini is unavailable.
     """
 
-    # ── Guard: if no API key, go straight to fallback ─────────────────────
     if not GOOGLE_API_KEY:
         return _fallback(message, program, level)
 
     try:
-        genai.configure(api_key=GOOGLE_API_KEY)
-        model = genai.GenerativeModel(
-            model_name=MODEL,
-            tools=[TOOLS],
-            system_instruction=SYSTEM_PROMPT,
-        )
+        client = genai.Client(api_key=GOOGLE_API_KEY)
 
         # ── First call: let Gemini decide which tool to use ────────────────
-        chat = model.start_chat()
-        response = chat.send_message(message)
+        response = client.models.generate_content(
+            model=MODEL,
+            contents=message,
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT,
+                tools=TOOLS,
+                tool_config=types.ToolConfig(
+                    function_calling_config=types.FunctionCallingConfig(
+                        mode=types.FunctionCallingConfigMode.AUTO
+                    )
+                ),
+            ),
+        )
 
         # ── Check if Gemini wants to call a tool ───────────────────────────
-        for part in response.parts:
-            if hasattr(part, "function_call") and part.function_call.name:
+        for part in response.candidates[0].content.parts:
+            if part.function_call:
                 fn = part.function_call
                 tool_name = fn.name
                 tool_args = dict(fn.args) if fn.args else {}
+
+                print(f"DEBUG tool call: {tool_name} args: {tool_args}")
 
                 # Execute the tool
                 tool_result = call_tool(tool_name, tool_args, program, level)
 
                 # ── Second call: send tool result back to Gemini ───────────
-                from google.generativeai.types import content_types
-                tool_response = chat.send_message(
-                    content_types.to_contents({
-                        "role": "tool",
-                        "parts": [{
-                            "function_response": {
-                                "name": tool_name,
-                                "response": {"result": tool_result}
-                            }
-                        }]
-                    })
+                response2 = client.models.generate_content(
+                    model=MODEL,
+                    contents=[
+                        types.Content(role="user", parts=[types.Part(text=message)]),
+                        types.Content(role="model", parts=[types.Part(function_call=fn)]),
+                        types.Content(role="user", parts=[
+                            types.Part(
+                                function_response=types.FunctionResponse(
+                                    name=tool_name,
+                                    response={"result": tool_result}
+                                )
+                            )
+                        ]),
+                    ],
+                    config=types.GenerateContentConfig(
+                        system_instruction=SYSTEM_PROMPT,
+                    ),
                 )
-                return tool_response.text.strip()
+                return response2.text.strip()
 
         # ── Gemini replied directly without a tool call ────────────────────
         text = response.text.strip() if response.text else ""
