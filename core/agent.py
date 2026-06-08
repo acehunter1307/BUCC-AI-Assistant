@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "")
-MODEL = "gemini-1.5-flash"
+MODEL = "gemini-1.5-flash-latest"
 
 # ── Tool definitions ───────────────────────────────────────────────────────
 TOOLS = Tool(function_declarations=[
